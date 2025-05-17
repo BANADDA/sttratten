@@ -1,0 +1,20 @@
+{
+  "ubuntu": {
+    "base_image": "/path/to/ubuntu_template.qcow2",
+    "memory": 4096,
+    "vcpus": 2,
+    "network_config": {
+      "model": "virtio",
+      "queues": 4
+    }
+  },
+  "windows": {
+    "base_image": "/path/to/windows_template.qcow2",
+    "memory": 8192,
+    "vcpus": 4,
+    "network_config": {
+      "model": "virtio",
+      "queues": 4
+    }
+  }
+}

@@ -1,0 +1,95 @@
+# VM Rental Service .gitignore
+
+# Private keys and credentials
+config/ssh_config/server_key
+config/ssh_config/server_key.pub
+**/*.pem
+**/*.key
+
+# VM templates and images
+**/*.qcow2
+**/*.img
+**/*.iso
+**/*.vdi
+**/*.vmdk
+
+# Logs
+logs/
+*.log
+log.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# Virtual Environments
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+.env
+.venv
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+.settings/
+.classpath
+*.sublime-workspace
+*.sublime-project
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Local configuration overrides
+config/local_config.json
+config/dev_config.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Service files
+*.pid
+*.lock

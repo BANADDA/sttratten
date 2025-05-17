@@ -1,0 +1,18 @@
+Windows Registry Editor Version 5.00
+
+; RDP Keepalive settings
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp]
+"KeepAliveTimeout"=dword:00000001
+"KeepAliveInterval"=dword:00000001
+
+; Enable Remote Desktop
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]
+"fDenyTSConnections"=dword:00000000
+
+; NLA requirement (0 to disable, 1 to enable)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp]
+"UserAuthentication"=dword:00000000
+
+; Allow RDP through firewall
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules]
+"RemoteDesktop-In-TCP"="v2.10|Action=Allow|Active=TRUE|Dir=In|Protocol=6|LPort=3389|App=System|"
